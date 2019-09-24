@@ -1,9 +1,69 @@
 <template>
-    <div>
-      <div>
-        <img src="../assets/img/fruit.jpg" alt="" style=" float:left ; margin:20px ;width:30%">
-        <H2 style="font-family:DFKai-sb;line-height:1.5;">台灣面積不大，卻擁有多樣的氣候與地理條件，加上長期以農立國，農業技術精良，成就了「寶島」的美名，蔬果的種類與品質在國際上享譽盛名，佔有一席之地。經由各區農業改良場的研發創新與培育、及民間種苗公司的生產配銷，農民能取得優秀的種苗，進而生產優良的水果，更進一步以水果名冠全球，精益求精的品種改良，不但讓水果品種日益增加，在水果品質的改良成就上更是大放異彩，保持了原有品種的特色，亦改進原有品種的缺點。
-          <br>臺灣春、夏、秋、冬四季都生產水果，種類繁多，色香味俱全，令人垂涎，有西瓜 、桃子、 蓮霧 、枇杷、 李子、 芒果、 葡萄 、龍眼 、百香果 、水蜜桃 、蘋果、 柳橙、 葡萄柚、 柚子、 草莓 、金柑、 蛋黃果、 香蕉 、番茄、 鳳梨 、木瓜、 番石榴等，美不勝收，獲得世界觀光客喜愛。<br>有些季節性水果經改良後甚至可以全年供應，一年四季各種不同的多樣水果，展現水果王國的實力與驕傲。</h2>
-        </div>
+    <div style="overflow-x: hidden">
+      <div class="text-center my-5"><h2>臺灣素有水果王國的美譽，水果種類豐富，一年四季皆可嘗到鮮甜可口的水果</h2></div><br>
+      <div class="row">
+  <div class="col-sm-6">
+    <div class="card border border-white">
+      <div class="card-body">
+        <img src="../assets/img/spring.jpg" alt="" srcset="" class="w-100">
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card border border-white">
+      <div class="card-body">
+        <h3 class="card-title mt-5">春天氣候多變，時寒時暖，同時人體皮表疏鬆，對外界的抵抗能力減弱，例如芒果、櫻桃、草莓、菠蘿、山竹、桑葚。</h3>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="row">
+  <div class="col-sm-6">
+    <div class="card border border-white">
+      <div class="card-body">
+        <h3 class="card-title mt-5">夏季盛產的水果有：百香果、芒果、桃子、水蜜桃、龍眼、荔枝、櫻桃、釋迦、梅子、火龍果、楊桃、酪梨、葡萄等，最為美味可口香甜。</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card border border-white">
+      <div class="card-body">
+        <img src="../assets/img/summer.jpg" alt="" srcset="" class="w-100">
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="row">
+  <div class="col-sm-6">
+    <div class="card border border-white">
+      <div class="card-body">
+        <img src="../assets/img/fall.jpg" alt="" srcset="" class="w-100">
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card border border-white">
+      <div class="card-body">
+        <h3 class="card-title mt-5">秋季，是收穫的季節，盛產石榴、梨、蘋果、柿子、柑橘、葡萄、柚子、獼猴桃、板栗、芭蕉、甘蔗、山楂等水果的季節。</h3>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="row">
+  <div class="col-sm-6">
+    <div class="card border border-white">
+      <div class="card-body">
+        <h3 class="card-title mt-5">冬季盛產的水果有：百香果、橘子、釋迦、小蕃茄、金棗、火龍果、葡萄、草莓、蓮霧、甘蔗、香蕉、芭樂、無花果、洋香瓜、杮子、蘋果等</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card border border-white">
+      <div class="card-body">
+        <img src="../assets/img/winter.jpg" alt="" srcset="" class="w-100">
+      </div>
+    </div>
+  </div>
+</div>
     </div>
 </template>

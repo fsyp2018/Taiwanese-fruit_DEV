@@ -1,6 +1,6 @@
 <template>
       <div class="mr-3 ml-3" style="overflow-x: hidden;">
-        <div style="text-align:center;">
+        <div class="text-center">
            <h2>根據季節進行選購，以品味最好的味道</h2>
         </div>
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">

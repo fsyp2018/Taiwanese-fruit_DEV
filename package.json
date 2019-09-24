@@ -18,7 +18,6 @@
     "vue-axios": "^2.1.4",
     "vue-loading-overlay": "^3.2.0",
     "vue-lottery": "^1.0.3",
-    "vue-lottery-draw": "^1.0.1",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },
