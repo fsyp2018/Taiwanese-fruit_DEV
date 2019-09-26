@@ -2,11 +2,11 @@
   <div>
       <div style="overflow-x: hidden">
         <h1 class="text-center">確認訂單</h1>
-        <div class="d-flex justify-content-center">
-        <div class="col-md-6">
-        <table class="table">
+        <div class="d-flex justify-content-center row">
+        <div class="col-md-4 mr-5">
+        <table class="table mt-5">
           <thead>
-            <th></th>
+            <th>刪除</th>
             <th>品名</th>
             <th>數量</th>
             <th>單價</th>
@@ -27,13 +27,13 @@
                 <div class="text-success" v-if="item.coupon">已套用優惠券</div>
               </td>
               <td class="align-middle">{{ item.qty }}/{{ item.product.unit }}</td>
-              <td class="align-middle text-right">{{ item.final_total }}</td>
+              <td class="align-middle text-left">{{ item.final_total }}</td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td colspan="3" class="text-right">總計</td>
-              <td class="text-right">{{ cart.total }}</td>
+              <td class="text-left">{{ cart.total }}</td>
             </tr>
             <tr v-if="cart.final_total !== cart.total">
               <td colspan="3" class="text-right text-success">折扣價</td>
@@ -48,10 +48,9 @@
           </div>
         </div>
       </div>
-        </div>
-   <!-- 訂購表單 -->
-    <div class="my-5 row justify-content-center">
-      <form class="col-md-6" @submit.prevent="createOrder">
+        <!-- 訂購表單 -->
+    <div class="col-md-4 ml-5">
+      <form @submit.prevent="createOrder">
         <div class="form-group">
           <label for="useremail">Email</label>
           <input
@@ -108,7 +107,6 @@
           >
           <span class="text-danger" v-if="errors.has('address')">地址必須輸入</span>
         </div>
-
         <div class="form-group">
           <label for="comment">留言</label>
           <textarea
@@ -125,6 +123,7 @@
         </div>
       </form>
     </div>
+        </div>
     </div>
         </div>
 </template>

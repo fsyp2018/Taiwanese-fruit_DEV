@@ -26,17 +26,17 @@
             </router-link>
       </li>
     </ul>
-<div class="dropleft mr-3" v-if="nub">
+<div class=" mr-3" v-if="nub">
   <a  href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-cart-plus fa-2x"><span class="nub" >{{ nub }}</span></i>
   </a>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
     <div class="mr-2 ml-2" style="width:500px">
-    <h5 class="modal-title" id="exampleModalCenterTitle">購物清單</h5><br>
+    <h5 class="modal-title text-center mt-2" id="exampleModalCenterTitle">購物清單</h5><br>
           <div>
         <table class="table">
           <thead>
-            <th></th>
+            <th>刪除</th>
             <th >品名</th>
             <th >數量</th>
             <th >單價</th>
@@ -74,7 +74,7 @@
       </div>
       <div>
       <router-link to="/orderform" class="nav-link">
-      <button class="btn btn-sg btn-primary btn-block text-center" @click="fillin">結帳去</button>
+      <button class="btn btn-sg btn-primary btn-block text-center">結帳去</button>
       </router-link>
       </div>
     </div>
@@ -127,10 +127,6 @@ export default {
           vm.confirmuser = true
         }
       })
-    },
-    fillin () {
-      $('#shoppingModal').modal('hide')
-      // this.$router.push('/orderform')
     },
     // 區域時
     ...mapActions('cartModules', ['getCart']),

@@ -3,7 +3,6 @@ import Vuex from 'vuex'
 // import axios from 'axios'
 import cartModules from './stores/cart.js'
 import productsModules from './stores/products.js'
-
 Vue.use(Vuex)
 
 export default new Vuex.Store({
