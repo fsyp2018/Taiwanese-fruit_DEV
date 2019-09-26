@@ -26,9 +26,9 @@
             </router-link>
       </li>
     </ul>
-<div class=" mr-3" v-if="nub">
+<div class="dropup mr-3 fixbottom" v-if="nub" >
   <a  href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <i class="fas fa-cart-plus fa-2x"><span class="nub" >{{ nub }}</span></i>
+    <i class="fas fa-cart-plus fa-2x" style="color:red;"><span class="nub" >{{ nub }}</span></i>
   </a>
   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
     <div class="mr-2 ml-2" style="width:500px">
@@ -181,3 +181,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.fixbottom {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1030;
+}
+</style>

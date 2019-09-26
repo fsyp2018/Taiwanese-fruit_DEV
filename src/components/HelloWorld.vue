@@ -4,7 +4,7 @@
   <loading :active.sync="isLoading"></loading>
   <TopNavbar class="sticky-top"/>
   <div class="mt-3">
-      <router-view/>
+      <router-view />
   </div>
   </div>
 </template>

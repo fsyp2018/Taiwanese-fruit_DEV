@@ -1,6 +1,7 @@
 <template>
     <div style="overflow-x: hidden">
       <div class="text-center my-5"><h2>臺灣素有水果王國的美譽，水果種類豐富，一年四季皆可嘗到鮮甜可口的水果</h2></div><br>
+      <div class="mx-auto w-75">
       <div class="row">
   <div class="col-sm-6">
     <div class="card border border-white">
@@ -64,6 +65,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
     </div>
 </template>
