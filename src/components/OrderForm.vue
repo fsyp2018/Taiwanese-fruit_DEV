@@ -1,9 +1,9 @@
 <template>
   <div>
-      <!-- <loading :active.sync="isLoading"></loading> -->
       <div style="overflow-x: hidden">
-    <div class="my-5 row justify-content-center">
-      <div class="col-md-6">
+        <h1 class="text-center">確認訂單</h1>
+        <div class="d-flex justify-content-center">
+        <div class="col-md-6">
         <table class="table">
           <thead>
             <th></th>
@@ -48,8 +48,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- 訂購表單 -->
+        </div>
+   <!-- 訂購表單 -->
     <div class="my-5 row justify-content-center">
       <form class="col-md-6" @submit.prevent="createOrder">
         <div class="form-group">
@@ -126,7 +126,7 @@
       </form>
     </div>
     </div>
-  </div>
+        </div>
 </template>
 
 <script>

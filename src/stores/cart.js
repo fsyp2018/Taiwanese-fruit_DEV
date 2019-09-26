@@ -42,21 +42,17 @@ export default {
       })
     },
     addtoCart (context, { id, qty, title }) {
-      if (qty === 0) {
-        alert('請選擇商品數量')
-      } else {
-        const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/cart`
-        const cart = {
-          product_id: id,
-          qty
-        }
-        context.commit('LOADING', true, { root: true })
-        axios.post(url, { data: cart }).then(response => {
-          new Vue().$bus.$emit('messsage:push', title + qty + '個已加到購物車中', 'success')
-          context.dispatch('getCart')
-          context.commit('LOADING', false, { root: true })
-        })
+      const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/cart`
+      const cart = {
+        product_id: id,
+        qty
       }
+      context.commit('LOADING', true, { root: true })
+      axios.post(url, { data: cart }).then(response => {
+        new Vue().$bus.$emit('messsage:push', title + qty + '個已加到購物車中', 'success')
+        context.dispatch('getCart')
+        context.commit('LOADING', false, { root: true })
+      })
     }
   },
   getters: {

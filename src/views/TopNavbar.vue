@@ -22,13 +22,64 @@
       </li>
       <li class="nav-item mr-3 ml-3">
             <router-link to="/Lottery">
-              <button type="button" class="btn btn-warning">優惠輪盤</button>
+              <button type="button" class="btn btn-secondary">優惠輪盤</button>
             </router-link>
       </li>
     </ul>
-    <div class="form-inline my-2 my-lg-0 mr-3">
-      <a href="#" @click="openshoppingModal" v-if="nub"><i class="fas fa-cart-plus"><span class="nub" >{{ nub }}</span></i></a>
-   </div>
+<div class="dropleft mr-3" v-if="nub">
+  <a  href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-cart-plus fa-2x"><span class="nub" >{{ nub }}</span></i>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <div class="mr-2 ml-2" style="width:500px">
+    <h5 class="modal-title" id="exampleModalCenterTitle">購物清單</h5><br>
+          <div>
+        <table class="table">
+          <thead>
+            <th></th>
+            <th >品名</th>
+            <th >數量</th>
+            <th >單價</th>
+          </thead>
+          <tbody>
+            <tr v-for="item in cart.carts" :key="item.id">
+              <td class="align-middle">
+                <button
+                  type="button"
+                  class="btn btn-outline-danger btn-sm"
+                  @click.prevent="removeCartItem(item.id,item.product.title,item.qty)"
+                >
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </td>
+              <td class="align-middle">
+                {{ item.product.title }}
+                <div class="text-success" v-if="item.coupon">已套用優惠券</div>
+              </td>
+              <td class="align-middle">{{ item.qty }}/{{ item.product.unit }}</td>
+              <td class="align-middle text-left">{{ item.final_total }}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" class="text-right">總計</td>
+              <td class="text-left">{{ cart.total }}</td>
+            </tr>
+            <tr v-if="cart.final_total !== cart.total">
+              <td colspan="3" class="text-left text-success">折扣價</td>
+              <td class="text-left text-success">{{ cart.final_total }}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div>
+      <router-link to="/orderform" class="nav-link">
+      <button class="btn btn-sg btn-primary btn-block text-center" @click="fillin">結帳去</button>
+      </router-link>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="form-inline my-2 my-lg-0">
       <a href="#" @click="openModal"><i class="fas fa-cog fa-2x"></i></a>
     </div>
@@ -36,15 +87,12 @@
 </nav>
 <!-- LoginModal -->
 <LoginModal :user="user" :confirmuser="confirmuser" @signin="signin"/>
-<!-- 開起購物車model -->
-<ShoppingModal :cart="cart" @fillin="fillin" @removeCartItem="removeCartItem"/>
     </div>
 </template>
 
 <script>
 import $ from 'jquery'
 import LoginModal from '../components/LoginModal.vue'
-import ShoppingModal from '../components/ShoppingModal.vue'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   data () {
@@ -66,9 +114,6 @@ export default {
       vm.user.password = ''
       vm.confirmuser = false
       $('#exampleModalCenter').modal('show')
-    },
-    openshoppingModal () {
-      $('#shoppingModal').modal('show')
     },
     signin () {
       const api = `${process.env.VUE_APP_API}/admin/signin`
@@ -124,8 +169,7 @@ export default {
     vm.getCart()
   },
   components: {
-    LoginModal,
-    ShoppingModal
+    LoginModal
   },
   computed: {
     // 區域時

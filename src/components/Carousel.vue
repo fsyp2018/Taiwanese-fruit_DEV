@@ -12,7 +12,7 @@
   <div class="col-sm-6">
     <div class="card border border-white">
       <div class="card-body">
-        <h3 class="card-title mt-5">春天氣候多變，時寒時暖，同時人體皮表疏鬆，對外界的抵抗能力減弱，例如芒果、櫻桃、草莓、菠蘿、山竹、桑葚。</h3>
+        <h3 class="card-title mt-5">春天氣候多變，時寒時暖，同時人體皮表疏鬆，對外界的抵抗能力減弱，可多吃當季盛產的水果，例如芒果、櫻桃、草莓、菠蘿、山竹、桑葚。</h3>
       </div>
     </div>
   </div>
